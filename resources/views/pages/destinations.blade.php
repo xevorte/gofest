@@ -51,13 +51,13 @@
 
 @section('content')
 <section class="search" style="margin-top: 70px;">
-    <form action="" method="post">
+    <form action="{{ route('search') }}" method="get">
         <div class="tab-content bg-white pt-5" id="pills-tabContent">
             <div class="tab-pane fade show active container" id="sale" role="tabpanel">
                 <div class="row m-0 justify-content-evenly align-items-center">
                     <div class="col-lg-2 p-0 d-flex align-items-center">
                         <h5 class="m-0 me-3 baseColor"><i class="fas fa-map-marker-alt"></i></h5>
-                        <select name="lokasi" id="lokasi" class="form-select fw-normal"
+                        <select name="location" id="location" class="form-select fw-normal"
                             aria-label="Default select example">
                             <option selected disabled hidden>Select Your Destination</option>
                             <option value="Japanese">Japanese</option>
@@ -70,8 +70,8 @@
                         <h5 class="m-0 me-3 baseColor"><i class="fas fa-building"></i></h5>
                         <select name="type" id="type" class="form-select fw-normal" aria-label="Default select example">
                             <option selected disabled hidden>Select Type</option>
-                            <option value="Hotel">Hotel</option>
-                            <option value="Hostel">Hostel</option>
+                            <option value="Hotels">Hotels</option>
+                            <option value="Hostels">Hostels</option>
                             <option value="Apartments">Apartments</option>
                         </select>
                     </div>
@@ -87,17 +87,15 @@
                     </div>
                     <div class="col-lg-2 p-0 d-flex align-items-center">
                         <h5 class="m-0 me-3 baseColor"><i class="fas fa-users"></i></h5>
-                        <select name="lokasi" id="lokasi" class="form-select fw-normal"
+                        <select name="status" id="status" class="form-select fw-normal"
                             aria-label="Default select example">
-                            <option selected disabled hidden>How Many People</option>
-                            <option value="One">1 Traveler</option>
-                            <option value="Two">2 Travelers</option>
-                            <option value="Three">3 Travelers</option>
-                            <option value="Four">4 Travelers</option>
+                            <option selected disabled hidden>Destination Availability</option>
+                            <option value="Available">Available</option>
+                            <option value="Unavailable">Unavailable</option>
                         </select>
                     </div>
                     <div class="col-lg-1 d-flex justify-content-end p-0 mt-4 mt-lg-0">
-                        <button type="submit" name="sale" class="btn bgColor bgHover text-white px-0 py-2 w-100">
+                        <button type="submit" class="btn bgColor bgHover text-white px-0 py-2 w-100">
                             <p class="fw-bold">Search</p>
                         </button>
                     </div>
@@ -116,7 +114,8 @@
                 <div class="row m-0 justify-content-between">
                     <div class="col-6 p-0 my-1">
                         <div class="form-check">
-                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value="" id="5">
+                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value=""
+                                id="5">
                             <label class="form-check-label fw-bold" for="5">
                                 5 Stars
                             </label>
@@ -124,7 +123,8 @@
                     </div>
                     <div class="col-6 p-0 my-1">
                         <div class="form-check">
-                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value="" id="4">
+                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value=""
+                                id="4">
                             <label class="form-check-label fw-bold" for="4">
                                 2 Stars
                             </label>
@@ -132,7 +132,8 @@
                     </div>
                     <div class="col-6 p-0 my-1">
                         <div class="form-check">
-                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value="" id="3">
+                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value=""
+                                id="3">
                             <label class="form-check-label fw-bold" for="3">
                                 4 Stars
                             </label>
@@ -140,7 +141,8 @@
                     </div>
                     <div class="col-6 p-0 my-1">
                         <div class="form-check">
-                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value="" id="2">
+                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value=""
+                                id="2">
                             <label class="form-check-label fw-bold" for="2">
                                 1 Star
                             </label>
@@ -148,7 +150,8 @@
                     </div>
                     <div class="col-6 p-0 my-1">
                         <div class="form-check">
-                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value="" id="1">
+                            <input class="form-check-input shadow-none bg-secondary-light" type="checkbox" value=""
+                                id="1">
                             <label class="form-check-label fw-bold" for="1">
                                 3 Stars
                             </label>
@@ -156,7 +159,8 @@
                     </div>
                 </div>
                 <p class="fw-bold mt-4 mb-3">By Location</p>
-                <select name="location" id="location" class="form-select text-sm border py-2 px-3 rounded-3 fw-bold shadow-none">
+                <select name="location" id="location"
+                    class="form-select text-sm border py-2 px-3 rounded-3 fw-bold shadow-none">
                     <option selected hidden disabled>Select Location</option>
                     <option value="Indonesia">Indonesia</option>
                     <option value="Japanese">Japanese</option>
@@ -166,7 +170,7 @@
             </div>
         </div>
         <div class="col-lg-9 p-0 ps-lg-5">
-            @foreach ($data as $d)
+            @forelse ($data as $d)
             <div class="row m-0 bg-white rounded-12 mt-4">
                 <div class="col-md-9 p-4 d-flex cardy">
                     <div class="card-image rounded-3 me-4"
@@ -180,7 +184,8 @@
                                 @else
                                 <p class="text-secondary-light text-sm me-1"><i class="fas fa-star"></i></p>
                                 @endif
-                                @endfor
+                            @endfor
+                            <p class="text-sm baseColor fw-bold ms-2">({{ $d->rating }})</p>
                         </div>
                         <div class="d-flex align-items-center mb-3">
                             <p class="text-sm baseColor fw-bold"><i class="fas fa-map-marker-alt"></i></p>
@@ -206,7 +211,10 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+            <div class="mt-5"></div>
+            <img src="{{ url('frontend/images/empty_search.png') }}" alt="search empty" width="65%" class="m-auto d-block mt-5 mt-lg-0">
+            @endforelse
 
             <div class="d-flex justify-content-center mt-5 shadow-none">
                 {{ $data->links('vendor.pagination.simple-bootstrap-4') }}

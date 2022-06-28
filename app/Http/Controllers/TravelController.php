@@ -29,6 +29,45 @@ class TravelController extends Controller
         ]);
     }
 
+    public function search(Request $request)
+    {
+        $data = TravelPackage::with(['review', 'galleries']);
+        $keyword = $request->all();
+
+        if(isset($keyword['location'])) {
+            $data->where('country', 'like', '%'.$keyword['location'].'%');
+        }
+        if(isset($keyword['type'])) {
+            $data->where('type', 'like', '%'.$keyword['type'].'%');
+        }
+        if(isset($keyword['rating'])) {
+            $data->where('rating', '>=', $keyword['rating']);
+        }
+
+        return view('pages.destinations', [
+            'active' => 'destinations',
+            'data' => $data->latest()->paginate(4)
+        ]);
+    }
+
+    public function search_transportation(Request $request)
+    {
+        $data = Transportation::latest();
+        $keyword = $request->all();
+
+        if(isset($keyword['type'])) {
+            $data->where('type', 'like', '%'.$keyword['type'].'%');
+        }
+        if(isset($keyword['status'])) {
+            $data->where('status', 'like', '%'.$keyword['status'].'%');
+        }
+
+        return view('pages.transportations', [
+            'active' => 'transportations',
+            'data' => $data->latest()->paginate(4)
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

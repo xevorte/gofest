@@ -42,16 +42,17 @@ Gofest | Travel With Us
             <button class="btn bgColor tab-heading" data-bs-toggle="pill" data-bs-target="#sale" type="button"
                 role="tab">Online Booking</button>
         </ul>
-        <form action="" method="post">
-            <div class="tab-content bg-white" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="sale" role="tabpanel">
+        <form action="{{ route('search') }}" method="get">
+
+            <div class="tab-content bg-white">
+                <div class="tab-pane fade show active">
                     <div class="row m-0 justify-content-evenly align-items-center">
                         <div class="col-lg-2 p-0">
-                            <label class="form-label d-flex align-items-center" for="lokasi">
+                            <label class="form-label d-flex align-items-center" for="location">
                                 <span class="text-sm me-2 baseColor"><i class="fas fa-map-marker-alt"></i></span>
                                 <label>Location</label>
                             </label>
-                            <select name="lokasi" id="lokasi" class="form-select" aria-label="Default select example">
+                            <select name="location" id="location" class="form-select" required>
                                 <option selected disabled hidden>Select Your Destination</option>
                                 <option value="Japanese">Japanese</option>
                                 <option value="Indonesia">Indonesia</option>
@@ -64,10 +65,10 @@ Gofest | Travel With Us
                                 <span class="text-sm me-2 baseColor"><i class="fas fa-building"></i></span>
                                 <label>Type</label>
                             </label>
-                            <select name="type" id="type" class="form-select" aria-label="Default select example">
+                            <select name="type" id="type" class="form-select" required>
                                 <option selected disabled hidden>Select Type</option>
-                                <option value="Hotel">Hotel</option>
-                                <option value="Hostel">Hostel</option>
+                                <option value="Hotels">Hotels</option>
+                                <option value="Hostels">Hostels</option>
                                 <option value="Apartments">Apartments</option>
                             </select>
                         </div>
@@ -76,7 +77,7 @@ Gofest | Travel With Us
                                 <span class="text-sm me-2 baseColor"><i class="fas fa-cloud-moon"></i></span>
                                 <label>Duration</label>
                             </label>
-                            <select name="duration" id="duration" class="form-select" aria-label="Default select example">
+                            <select name="duration" id="duration" class="form-select">
                                 <option selected disabled hidden>1 Night</option>
                                 @for($i = 1; $i <= 30; $i++)
                                 <option value="{{ $i }}">
@@ -86,20 +87,18 @@ Gofest | Travel With Us
                             </select>
                         </div>
                         <div class="col-lg-2 p-0">
-                            <label class="form-label d-flex align-items-center" for="lokasi">
+                            <label class="form-label d-flex align-items-center" for="status">
                                 <span class="text-sm me-2 baseColor"><i class="fas fa-users"></i></span>
-                                <label>Total Person</label>
+                                <label>Current Status</label>
                             </label>
-                            <select name="lokasi" id="lokasi" class="form-select" aria-label="Default select example">
-                                <option selected disabled hidden>How Many People</option>
-                                <option value="One">1 Traveler</option>
-                                <option value="Two">2 Travelers</option>
-                                <option value="Three">3 Travelers</option>
-                                <option value="Four">4 Travelers</option>
+                            <select name="status" id="status" class="form-select">
+                                <option selected disabled hidden>Destination Availability</option>
+                                <option value="Available">Available</option>
+                                <option value="Unavailable">Unavailable</option>
                             </select>
                         </div>
                         <div class="col-lg-1 d-flex justify-content-end p-0 mt-4 mt-lg-0">
-                            <button type="submit" name="sale" class="btn bgColor bgHover text-white py-3 w-100">
+                            <button type="submit" class="btn bgColor bgHover text-white py-3 w-100">
                                 <i class="fas fa-search"></i>
                             </button>
                         </div>

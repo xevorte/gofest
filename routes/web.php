@@ -20,6 +20,8 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', 'TravelController@index')->name('home');
+Route::get('/search/destination', 'TravelController@search')->name('search');
+Route::get('/search/transportation', 'TravelController@search_transportation')->name('search-transportation');
 Route::get('/destinations', 'TravelController@destinations')->name('destinations');
 Route::get('/transportations', 'TravelController@transportations')->name('transportations');
 Route::get('/destinations/{country}/{type}/{travelpackage:slug}', 'TravelController@show')->name('show');
