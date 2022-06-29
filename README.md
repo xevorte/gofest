@@ -1,4 +1,4 @@
-![Gofest](https://user-images.githubusercontent.com/64916445/175939509-fee22429-efca-4720-8bd2-67bcedc5ec50.jpg)
+![Gofest2](https://user-images.githubusercontent.com/64916445/176343823-3c9783bb-8beb-4cab-b417-5735c296d094.jpg)
 
 <h1 align="center">Gofest</h1>
 <p align="center">Gofest is a website that provides transportation and lodging ticket booking services to make it easier for people who want to go on vacation.</p>
