@@ -1,4 +1,4 @@
-![Gofest](https://user-images.githubusercontent.com/64916445/175939509-fee22429-efca-4720-8bd2-67bcedc5ec50.jpg)
+![Gofest2](https://user-images.githubusercontent.com/64916445/177006209-97b0f101-78de-433b-b19d-cd22d5e46bef.jpg)
 
 <p></p>
 
@@ -64,7 +64,7 @@ Gofest is a website that provides transportation and lodging ticket booking serv
    php artisan serve
    ```
 
-<p></p>
+<p></p><p></p>
 
 <h2 id="credentials">🔐 Login Credentials</h2>
 
