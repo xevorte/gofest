@@ -1,13 +1,41 @@
-![Gofest2](https://user-images.githubusercontent.com/64916445/176343823-3c9783bb-8beb-4cab-b417-5735c296d094.jpg)
+![Gofest](https://user-images.githubusercontent.com/64916445/175939509-fee22429-efca-4720-8bd2-67bcedc5ec50.jpg)
 
-<h1 align="center">Gofest</h1>
-<p align="center">Gofest is a website that provides transportation and lodging ticket booking services to make it easier for people who want to go on vacation.</p>
+<p></p>
 
-## Installation
+<h1 align="center">Gofest - Travel With Us</h1>
+
+<p></p>
+
+<p align="center">
+	<img src="https://img.shields.io/github/issues/irhamshidiq/gofest?style=flat-square">
+	<img src="https://img.shields.io/github/stars/irhamshidiq/gofest?style=flat-square"> 
+	<img src="https://img.shields.io/github/forks/irhamshidiq/gofest?style=flat-square">
+	<img src="https://img.shields.io/github/license/irhamshidiq/gofest?style=flat-square">
+	<img src="https://img.shields.io/badge/maintained%3F-no-red.svg?style=flat-square">
+	<img src="https://img.shields.io/github/followers/irhamshidiq.svg?style=flat-square&label=followers">
+</p>
+
+<p align="center">
+  <a href="#about">About Project</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#credentials">Login Credentials</a> •
+  <a href="#support">Support</a> •
+  <a href="#contribution">Contribution</a> •
+  <a href="#license">License</a>
+</p>
+
+<p></p>
+
+<h2 id="about">🏬 About Gofest</h2>
+Gofest is a website that provides transportation and lodging ticket booking services to make it easier for people who want to go on vacation, made with <a href="https://getbootstrap.com">Bootstrap</a> and <a href="https://laravel.com">Laravel</a>
+
+<p></p>
+
+<h2 id="installation">💻 Installation</h2>
 
 1. Clone this project
    ```bash
-   git clone https://github.com/irhamshidiq/gofest
+   git clone https://github.com/irhamshidiq/gofest.git
    cd gofest
    ```
 2. Install dependencies
@@ -36,20 +64,47 @@
    php artisan serve
    ```
 
-7. Login credentials
+<p></p>
+
+<h2 id="credentials">🔐 Login Credentials</h2>
 
 **Admin**
 
-**Email:** admin@gmail.com
+Email : admin@gmail.com
 
-**Password:** rahasia
+Password : rahasia
 
 **User**
 
-**Email:** user@gmail.com
+Email : user@gmail.com
 
-**Password:** user123
+Password : user123
 
-## Contributing
+<p></p>
 
-Feel free to contribute and make a pull request.
+<h2 id="dukungan">💌 Support</h2>
+
+You guys can support me on the tracteer platform! Your support will be very helpful for me, but with you this star project has also been very helpful, you know!
+
+<p></p>
+
+<a href="https://trakteer.id/irhamshidiq/tip" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-5.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+
+<p></p>
+
+<h2 id="contribution">🤝 Contribution</h2>
+
+I really appreciate contributions, issues and feature requests because this application is far from perfect. Feel free to pull requests and make changes to this project.
+
+Since I finished this project myself, but there are many features and many things that can be improved, I really appreciate your help.
+
+<p></p>
+
+<h2 id="lisensi">📝 License</h2>
+
+- Copyright © 2022 Irham Muhammad Shidiq
+- Gofest is an open-source web application licensed under the MIT license
+
+---
+
+**<p align="center">Made with ❤️ by Irham Muhammad Shidiq</p>**
